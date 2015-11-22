@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Travolta</title>
+		<link type="text/css" href="jquery-ui.css" rel="stylesheet" />
+		<link type="text/css" href="jquery-ui.structure.css" rel="stylesheet" />
+		<link type="text/css" href="jquery-ui.theme.css" rel="stylesheet" />
+		<style type="text/css">
+			body, canvas{
+				margin: 0;
+				padding: 0;
+			}
+
+			#resizable{
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: transparent;
+			}
+
+			video{
+				visibility: hidden;
+			}
+
+			input{
+				position: absolute;
+				bottom: 0;
+			}
+
+			#generateGif{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script src="jquery-ui.js"></script>
+		<script type="text/javascript" src="LZWEncoder.js"></script>
+		<script type="text/javascript" src="NeuQuant.js"></script>
+		<script type="text/javascript" src="GIFEncoder.js"></script>
+		<script type="text/javascript" src="b64.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<canvas id="travolta"></canvas>
+		<br>
+		<input type="file" id="image" />
+		<button id="generateGif" onclick="generateGif();">Generate Gif</button>
+		<div id="resizable" class="ui-widget-content" style="width: 717px; height: 578px; border: none;">
+		<video id="travoltaGreenScreen" webkit-playsinline="" loop="loop" muted="muted" autoplay="autoplay" preload="auto" poster="//i.imgur.com/mkhFnmCh.jpg" style="width: 100%; height: 100%;">
+            <source type="video/webm" src="travolta.webm"></source>
+        </video>
+        </div>
+        <img id="output"></img>
+	</body>
+</html>
